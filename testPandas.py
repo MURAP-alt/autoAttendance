@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from time import sleep
+import pandas as pd
 
 response = requests.get("https://yakkun.com/swsh/zukan/n1")
 
@@ -30,3 +31,7 @@ print(status[54].string)
 
 # 素早さ
 print(status[60].string)
+
+columns = ["Name", "Url"]
+df = pd.DataFrame(columns=columns) # 列名を指定する
+print(df)
