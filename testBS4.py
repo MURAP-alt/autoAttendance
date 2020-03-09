@@ -17,9 +17,12 @@ def getUrl(num):
     data = BeautifulSoup(response.content,"html.parser")
     return data
 
+# //*[@id="stats_anchor"]/table/tbody/tr[10]/td[4]
+
 # 名前を表示する
 def disp(data):
     print(data.find("tr",{"class": "head"}).string)
+    # print(data.find("tr",{"class": "left"}))
 
 for num in range(int(startNum), int(finishNum) + 1):
     data = getUrl(num)
