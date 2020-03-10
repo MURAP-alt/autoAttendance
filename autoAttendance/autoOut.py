@@ -26,8 +26,8 @@ loginButton.submit()
 sleep(2)
 
 # 退勤
-out = driver.find_element_by_xpath("/html/body/div[1]/div[3]/table/tbody/tr/td[1]/div[1]/div[2]/div/form/table/tbody/tr/td[2]/input")
-out.send_keys(Keys.ENTER)
+attendOut = driver.find_element_by_xpath("/html/body/div[1]/div[3]/table/tbody/tr/td[1]/div[1]/div[2]/div/form/table/tbody/tr/td[2]/input")
+attendOut.send_keys(Keys.ENTER)
 
 sleep(1)
 
