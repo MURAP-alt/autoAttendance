@@ -6,6 +6,8 @@ from selenium import webdriver
 import chromedriver_binary
 from selenium.webdriver.common.keys import Keys
 
+import sys
+
 
 # Google検索する
 # driver = webdriver.Chrome()
@@ -28,4 +30,6 @@ driver.find_element_by_xpath("//div[@id='zukan_header']/p/span/a").click()
 # btn.click()
 
 # driver.close()
-# driver.quit()
+driver.quit()
+
+sys.exit()

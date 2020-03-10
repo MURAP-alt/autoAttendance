@@ -1,3 +1,7 @@
+import datetime
+
 print('Hello, world!')
 print(1 + 2)
-#コメント
+
+nowTime = datetime.datetime.now()
+print(nowTime)

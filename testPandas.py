@@ -15,23 +15,33 @@ status = data.find_all("td")
 print(name)
 
 # 無振りHP
-print(status[30].string)
+h = status[30].string
+print(h)
 
 # 無振り攻撃
-print(status[36].string)
+a = status[36].string
+print(a)
 
 # 無振り防御
-print(status[42].string)
+b = status[42].string
+print(b)
 
 # 無振り特攻
-print(status[48].string)
+c = status[48].string
+print(c)
 
 # 特防
-print(status[54].string)
+d = status[54].string
+print(d)
 
 # 素早さ
-print(status[60].string)
+s = status[60].string
+print(s)
 
-columns = ["Name", "Url"]
-df = pd.DataFrame(columns=columns) # 列名を指定する
-print(df)
+df = pd.DataFrame([
+  [name, h, a, b, c, d, s],
+  ["0002", "Lily", "Sales", "", ""]],
+  columns=['名前', 'HP', '攻撃', '防御', '特攻', '特防', '素早さ'])
+ 
+# CSV ファイル (employee.csv) として出力
+df.to_csv("employee.csv",encoding="ANSI")
