@@ -12,15 +12,15 @@ args = sys.argv
 option = Options()
 option.add_argument('--headless')
 driver = webdriver.Chrome(options=option)
-driver.get("http://co-works.net:91/aipo/")
+driver.get(str(args[1]))
 
 # ユーザー名入力
 nameForm = driver.find_element_by_id("member_username")
-nameForm.send_keys(str(args[1]))
+nameForm.send_keys(str(args[2]))
 
 # パスワード
 pw = driver.find_element_by_id("password")
-pw.send_keys(str(args[2]))
+pw.send_keys(str(args[3]))
 
 sleep(1)
 
