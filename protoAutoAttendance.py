@@ -1,4 +1,5 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from time import sleep
 import sys
 
@@ -6,7 +7,10 @@ import sys
 import chromedriver_binary
 from selenium.webdriver.common.keys import Keys
 
-driver = webdriver.Chrome()
+option = Options()
+option.add_argument('--headless')
+driver = webdriver.Chrome(options=option)
+
 driver.get("http://co-works.net:91/aipo/")
 
 # ユーザー名入力
