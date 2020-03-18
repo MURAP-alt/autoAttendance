@@ -6,5 +6,5 @@
 ```
 cd C:\Users\........\autoAttendance
 
-python autoIn.py URL userName PassWord
+python autoIn.py [URL] [userName] [PassWord]
 ```
