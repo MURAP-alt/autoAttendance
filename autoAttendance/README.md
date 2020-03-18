@@ -4,7 +4,7 @@
 
 
 ```
-cd C:\Users\MURAP-alt\........\autoAttendance
+cd C:\Users\........\autoAttendance
 
-autoIn.py URL userName PassWord
+python autoIn.py URL userName PassWord
 ```
